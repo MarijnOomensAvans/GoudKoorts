@@ -1,0 +1,113 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="GoudKoorts.Program" Collapsed="true">
+    <Position X="1" Y="3" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAA=</HashCode>
+      <FileName>Program.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="GoudKoorts.Map">
+    <Position X="6" Y="5.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAACAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Map.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Field Name="spawnPoints" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="GoudKoorts.InputView">
+    <Position X="3.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>InputView.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="GoudKoorts.OutputView">
+    <Position X="6.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>OutputView.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="GoudKoorts.Controller">
+    <Position X="3.75" Y="3" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAEAAAAAAAAAAAAAIAAAAAAAAAAAAAAAAEAAAAAAA=</HashCode>
+      <FileName>Controller.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Field Name="InputView" />
+      <Field Name="map" />
+      <Field Name="OutputView" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="GoudKoorts.Track">
+    <Position X="9.75" Y="5.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Track.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Field Name="_movable" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="GoudKoorts.SpawnPoint">
+    <Position X="7.5" Y="8" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>SpawnPoint.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="GoudKoorts.Switch">
+    <Position X="9.25" Y="8" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Switch.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="GoudKoorts.Movable">
+    <Position X="1.5" Y="6.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Movable.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="GoudKoorts.MinceCart">
+    <Position X="1" Y="8.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>MinceCart.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="GoudKoorts.Boat">
+    <Position X="3.25" Y="8.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Boat.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="GoudKoorts.Harbour">
+    <Position X="11" Y="8" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Harbour.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="GoudKoorts.Water">
+    <Position X="12.75" Y="8" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Water.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="GoudKoorts.Shunt">
+    <Position X="14.5" Y="8" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Shunt.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>
