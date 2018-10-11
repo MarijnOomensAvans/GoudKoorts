@@ -7,5 +7,9 @@ namespace GoudKoorts
 {
     public class Boat : Movable
     {
+        public override char Print()
+        {
+            return 'B';
+        }
     }
 }

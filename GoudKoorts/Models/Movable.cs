@@ -5,7 +5,8 @@ using System.Text;
 
 namespace GoudKoorts
 {
-    public class Movable
+    public abstract class Movable
     {
+        public abstract char Print();
     }
 }

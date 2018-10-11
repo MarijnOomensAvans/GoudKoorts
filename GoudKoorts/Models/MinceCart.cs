@@ -7,5 +7,9 @@ namespace GoudKoorts
 {
     public class MinceCart : Movable
     {
+        public override char Print()
+        {
+            return '@';
+        }
     }
 }

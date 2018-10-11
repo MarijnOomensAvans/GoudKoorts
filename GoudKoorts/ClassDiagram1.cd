@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <ClassDiagram MajorVersion="1" MinorVersion="1">
   <Class Name="GoudKoorts.Program" Collapsed="true">
-    <Position X="1" Y="3" Width="1.5" />
+    <Position X="1.75" Y="3" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAA=</HashCode>
       <FileName>Proces\Program.cs</FileName>
@@ -46,7 +46,7 @@
   <Class Name="GoudKoorts.Track">
     <Position X="9.75" Y="5.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <HashCode>AgAAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAAAEAAA=</HashCode>
       <FileName>Models\Track.cs</FileName>
     </TypeIdentifier>
     <ShowAsAssociation>
@@ -98,7 +98,7 @@
   <Class Name="GoudKoorts.Water">
     <Position X="12.75" Y="8" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEAAA=</HashCode>
       <FileName>Models\Water.cs</FileName>
     </TypeIdentifier>
   </Class>
@@ -112,7 +112,7 @@
   <Class Name="GoudKoorts.EmptySpace">
     <Position X="16.25" Y="8" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEAAA=</HashCode>
       <FileName>EmptySpace.cs</FileName>
     </TypeIdentifier>
   </Class>
