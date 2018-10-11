@@ -43,7 +43,10 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Boat.cs" />
+    <Compile Include="DefaultTrack.cs" />
+    <Compile Include="EmptySpace.cs" />
+    <Compile Include="EndField.cs" />
+    <Compile Include="Models\Boat.cs" />
     <Compile Include="Proces\Controller.cs" />
     <Compile Include="Models\Harbour.cs" />
     <Compile Include="View\InputView.cs" />
