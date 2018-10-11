@@ -5,10 +5,13 @@ using System.Text;
 
 namespace GoudKoorts
 {
-    public abstract class Track
+    public class EmptySpace : Track
     {
-        private Movable _movable;
 
-        public abstract char Print();
+        public override char Print()
+        {
+            return ' ';
+        }
+
     }
 }

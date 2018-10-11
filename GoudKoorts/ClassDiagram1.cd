@@ -4,14 +4,14 @@
     <Position X="1" Y="3" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAA=</HashCode>
-      <FileName>Program.cs</FileName>
+      <FileName>Proces\Program.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="GoudKoorts.Map">
     <Position X="6" Y="5.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAACAAAAAAAAAAAAAAA=</HashCode>
-      <FileName>Map.cs</FileName>
+      <FileName>Models\Map.cs</FileName>
     </TypeIdentifier>
     <ShowAsAssociation>
       <Field Name="spawnPoints" />
@@ -21,33 +21,33 @@
     <Position X="3.5" Y="0.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
-      <FileName>InputView.cs</FileName>
+      <FileName>View\InputView.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="GoudKoorts.OutputView">
     <Position X="6.25" Y="0.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
-      <FileName>OutputView.cs</FileName>
+      <FileName>View\OutputView.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="GoudKoorts.Controller">
     <Position X="3.75" Y="3" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAEAAAAAAAAAAAAAIAAAAAAAAAAAAAAAAEAAAAAAA=</HashCode>
-      <FileName>Controller.cs</FileName>
+      <FileName>Proces\Controller.cs</FileName>
     </TypeIdentifier>
     <ShowAsAssociation>
       <Field Name="InputView" />
-      <Field Name="map" />
       <Field Name="OutputView" />
+      <Field Name="map" />
     </ShowAsAssociation>
   </Class>
   <Class Name="GoudKoorts.Track">
     <Position X="9.75" Y="5.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAAAAAAA=</HashCode>
-      <FileName>Track.cs</FileName>
+      <FileName>Models\Track.cs</FileName>
     </TypeIdentifier>
     <ShowAsAssociation>
       <Field Name="_movable" />
@@ -57,56 +57,63 @@
     <Position X="7.5" Y="8" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
-      <FileName>SpawnPoint.cs</FileName>
+      <FileName>Models\SpawnPoint.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="GoudKoorts.Switch">
     <Position X="9.25" Y="8" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
-      <FileName>Switch.cs</FileName>
+      <FileName>Models\Switch.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="GoudKoorts.Movable">
     <Position X="1.5" Y="6.75" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
-      <FileName>Movable.cs</FileName>
+      <FileName>Models\Movable.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="GoudKoorts.MinceCart">
     <Position X="1" Y="8.75" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
-      <FileName>MinceCart.cs</FileName>
+      <FileName>Models\MinceCart.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="GoudKoorts.Boat">
     <Position X="3.25" Y="8.75" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
-      <FileName>Boat.cs</FileName>
+      <FileName>Models\Boat.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="GoudKoorts.Harbour">
     <Position X="11" Y="8" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
-      <FileName>Harbour.cs</FileName>
+      <FileName>Models\Harbour.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="GoudKoorts.Water">
     <Position X="12.75" Y="8" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
-      <FileName>Water.cs</FileName>
+      <FileName>Models\Water.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="GoudKoorts.Shunt">
     <Position X="14.5" Y="8" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
-      <FileName>Shunt.cs</FileName>
+      <FileName>Models\Shunt.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="GoudKoorts.EmptySpace">
+    <Position X="16.25" Y="8" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>EmptySpace.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Font Name="Segoe UI" Size="9" />
