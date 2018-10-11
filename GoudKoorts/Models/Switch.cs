@@ -7,7 +7,16 @@ namespace GoudKoorts
 {
     public class Switch : Track
     {
-        public override char Print()
+        //Switch has 2 nexts so is can switch
+        private Track _nextUp;
+        private Track _nextDown;
+
+        public Switch()
+        {
+            Next = _nextUp;
+        }
+
+    public override char Print()
         {
             return 'S';
         }

@@ -5,12 +5,12 @@ using System.Text;
 
 namespace GoudKoorts
 {
-    public class SpawnPoint : Track
+    public class DefaultTrack : Track
     {
 
         public override char Print()
         {
-            return 'X';
+            return '=';
         }
     }
 }
