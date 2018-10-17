@@ -63,7 +63,7 @@
   <Class Name="GoudKoorts.Switch">
     <Position X="9.25" Y="8" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAACAAACAAAAAAAAAAEAAA=</HashCode>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEAAA=</HashCode>
       <FileName>Models\Switch.cs</FileName>
     </TypeIdentifier>
   </Class>
@@ -119,15 +119,15 @@
   <Class Name="GoudKoorts.EndField">
     <Position X="18" Y="9.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
-      <FileName>Models\EndField.cs</FileName>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>EndField.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="GoudKoorts.DefaultTrack">
     <Position X="18" Y="8" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEAAA=</HashCode>
-      <FileName>Models\DefaultTrack.cs</FileName>
+      <FileName>DefaultTrack.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Font Name="Segoe UI" Size="9" />
