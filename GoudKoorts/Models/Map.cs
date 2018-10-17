@@ -2,13 +2,15 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Runtime.InteropServices;
 using System.Text;
 
 namespace GoudKoorts
 {
     public class Map
     {
-        private SpawnPoint[] spawnPoints;
+        private SpawnPoint[] _spawnPoints;
+        private List<Movable> _mineCarts;
         public Track[] Row1 { get; }
         public Track[] Row2 { get; }
         public Track[] Row3 { get; }
@@ -17,7 +19,8 @@ namespace GoudKoorts
 
         public Map()
         {
-            spawnPoints = new SpawnPoint[3];
+            _mineCarts = new List<Movable>();
+            _spawnPoints = new SpawnPoint[3];
             Row1 = new Track[10];
             Row2 = new Track[23];
             Row3 = new Track[10];
@@ -27,9 +30,9 @@ namespace GoudKoorts
             SpawnPoint SP1 = new SpawnPoint();
             SpawnPoint SP2 = new SpawnPoint();
             SpawnPoint SP3 = new SpawnPoint();
-            spawnPoints[0] = SP1;
-            spawnPoints[1] = SP2;
-            spawnPoints[2] = SP3;
+            _spawnPoints[0] = SP1;
+            _spawnPoints[1] = SP2;
+            _spawnPoints[2] = SP3;
 
             DefaultTrack DT1 = new DefaultTrack();
             SP1.Next = DT1;
@@ -251,10 +254,12 @@ namespace GoudKoorts
 
         internal void MoveCarts()
         {
+
             //Spawn a minecart at a random spawnpoint
             Random rand = new Random();
             int randomNumber = rand.Next(3);
-            spawnPoints[randomNumber].SpawnMineCart();
+            Movable newMineCart = _spawnPoints[randomNumber].SpawnMineCart();
+            _mineCarts.Add(newMineCart);
         }
     }
 }

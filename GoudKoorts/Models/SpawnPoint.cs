@@ -12,14 +12,25 @@ namespace GoudKoorts
             return false;
         }
 
-        public void SpawnMineCart()
+        public Movable SpawnMineCart()
         {
-            Movable = new MineCart();
+            if (Movable == null)
+            {
+                Movable = new MineCart();
+                return Movable;
+            }
+
+            return null;
         }
 
         public override char Print()
         {
-            return 'X';
+            if (Movable == null)
+            {
+                return 'X';
+            }
+
+            return Movable.Print();
         }
     }
 }
