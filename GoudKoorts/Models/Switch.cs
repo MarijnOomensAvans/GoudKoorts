@@ -5,7 +5,7 @@ using System.Text;
 
 namespace GoudKoorts
 {
-    public class Switch : Track
+    public class Switch : AbstractSwitch
     {
         //Switch has 2 nexts so is can switch
         private Track _nextUp;
@@ -17,7 +17,7 @@ namespace GoudKoorts
             _nextDown = nextDown;
         }
 
-        public void SwitchSwitch()
+        public override void SwitchSwitch()
         {
             if (Movable == null)
             {

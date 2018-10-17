@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace GoudKoorts.Models
 {   //2 to 1 switch
-    public class Switch2 : Track
+    public class Switch2 : AbstractSwitch
     {
         private Track _prevUp;
         private Track _prevDown;
@@ -36,7 +36,7 @@ namespace GoudKoorts.Models
             return true;
         }
 
-        public void SwitchSwitch()
+        public override void SwitchSwitch()
         {
             if (Movable == null)
             {

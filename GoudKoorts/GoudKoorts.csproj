@@ -43,6 +43,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Models\AbstractSwitch.cs" />
     <Compile Include="Models\DefaultTrack.cs" />
     <Compile Include="Models\EmptySpace.cs" />
     <Compile Include="Models\EndField.cs" />

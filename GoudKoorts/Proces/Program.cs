@@ -11,6 +11,7 @@ namespace GoudKoorts
         static void Main(string[] args)
         {
             new Controller().CountDown();
+            Console.ReadKey();
         }
     }
 }

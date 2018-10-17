@@ -9,6 +9,8 @@ namespace GoudKoorts
     public class Map
     {
         private SpawnPoint[] spawnPoints;
+        private AbstractSwitch[] Switches;
+
         public Track[] Row1 { get; }
         public Track[] Row2 { get; }
         public Track[] Row3 { get; }
@@ -17,6 +19,7 @@ namespace GoudKoorts
 
         public Map()
         {
+            Switches = new AbstractSwitch[5];
             spawnPoints = new SpawnPoint[3];
             Row1 = new Track[10];
             Row2 = new Track[23];
@@ -162,6 +165,13 @@ namespace GoudKoorts
             EndField EI = new EndField();
             DT31.Next = EI;
 
+            //fill switches
+            Switches[0] = S1;
+            Switches[1] = S2;
+            Switches[2] = S3;
+            Switches[3] = S4;
+            Switches[4] = S5;
+
             //fill rows
             Row1[0] = SP1;
             Row1[1] = DT1;
@@ -246,7 +256,8 @@ namespace GoudKoorts
 
         internal void SwitchSwitch(int v)
         {
-            throw new NotImplementedException();
+            int Index = v - 1;
+            Switches[Index].SwitchSwitch();
         }
 
         internal void MoveCarts()

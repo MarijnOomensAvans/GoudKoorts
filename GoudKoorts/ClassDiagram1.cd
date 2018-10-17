@@ -10,7 +10,7 @@
   <Class Name="GoudKoorts.Map">
     <Position X="6" Y="5.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAACAAAAAAAAAAAAAAA=</HashCode>
+      <HashCode>AAAAABAAAQAEAAAAAACAAAAA8AFCAAAAQAAgAAAAAAA=</HashCode>
       <FileName>Models\Map.cs</FileName>
     </TypeIdentifier>
     <ShowAsAssociation>
@@ -20,14 +20,14 @@
   <Class Name="GoudKoorts.InputView">
     <Position X="3.5" Y="0.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <HashCode>AAAAAAAAAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAgAAAA=</HashCode>
       <FileName>View\InputView.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="GoudKoorts.OutputView">
     <Position X="6.25" Y="0.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAA=</HashCode>
       <FileName>View\OutputView.cs</FileName>
     </TypeIdentifier>
   </Class>
@@ -53,14 +53,14 @@
   <Class Name="GoudKoorts.SpawnPoint">
     <Position X="7.5" Y="8" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAIAAAAAAAAAAAEAAA=</HashCode>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAIAAAAAAAAAAAEACA=</HashCode>
       <FileName>Models\SpawnPoint.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="GoudKoorts.Switch">
-    <Position X="9.25" Y="8" Width="1.5" />
+    <Position X="14" Y="2.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAACAAICAAAAAAAAAAEAAA=</HashCode>
+      <HashCode>AAAAAAAAAAAEAAAAAAAAAAAACAAICAAAAAAAAAAEAAA=</HashCode>
       <FileName>Models\Switch.cs</FileName>
     </TypeIdentifier>
   </Class>
@@ -71,11 +71,11 @@
       <FileName>Models\Movable.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="GoudKoorts.MinceCart">
+  <Class Name="GoudKoorts.MineCart">
     <Position X="1" Y="8.75" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEAAA=</HashCode>
-      <FileName>Models\MinceCart.cs</FileName>
+      <FileName>Models\MineCart.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="GoudKoorts.Boat">
@@ -110,21 +110,35 @@
     <Position X="16.25" Y="8" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAIAAAAAAAAAAAEAAA=</HashCode>
-      <FileName>EmptySpace.cs</FileName>
+      <FileName>Models\EmptySpace.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="GoudKoorts.EndField">
     <Position X="18" Y="9.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
-      <FileName>EndField.cs</FileName>
+      <FileName>Models\EndField.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="GoudKoorts.DefaultTrack">
     <Position X="18" Y="8" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAIAAAAAAAAAAAEAAA=</HashCode>
-      <FileName>DefaultTrack.cs</FileName>
+      <FileName>Models\DefaultTrack.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="GoudKoorts.Models.Switch2">
+    <Position X="12.25" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAEAgAAAAAAQAAAAAAIAAAAABAAAAAEAAA=</HashCode>
+      <FileName>Models\Switch2.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="GoudKoorts.AbstractSwitch">
+    <Position X="12.25" Y="5.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAIAAAAAAAAAAAEAAA=</HashCode>
+      <FileName>AbstractSwitch.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Font Name="Segoe UI" Size="9" />
