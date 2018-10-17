@@ -9,7 +9,12 @@ namespace GoudKoorts
     {
         public override bool MoveTo(Movable movable)
         {
-            throw new NotImplementedException();
+            return false;
+        }
+
+        public void SpawnMineCart()
+        {
+            Movable = new MinceCart();
         }
 
         public override char Print()

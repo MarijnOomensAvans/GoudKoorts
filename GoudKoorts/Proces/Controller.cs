@@ -28,7 +28,7 @@ namespace GoudKoorts
 
         private void CountDownEnded()
         {
-            Console.WriteLine("Done");
+            map.MoveCarts();
             CountDown();
         }
 
