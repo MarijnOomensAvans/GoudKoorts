@@ -7,5 +7,6 @@ namespace GoudKoorts
 {
     public class OutputView
     {
+
     }
 }

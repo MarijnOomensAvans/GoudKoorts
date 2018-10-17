@@ -14,15 +14,22 @@ namespace GoudKoorts
         private Map map;
         private int _waitTime = 2000;
 
+        public Controller()
+        {
+            InputView = new InputView();
+            OutputView = new OutputView();
+            map = new Map();
+        }
+
         public void CountDown()
         {
-                var delayInterval = TimeSpan.FromMilliseconds(_waitTime);
-                var runningTask = DoActionAfter(
-                    delayInterval,
-                    () => CountDownEnded());
+            var delayInterval = TimeSpan.FromMilliseconds(_waitTime);
+            var runningTask = DoActionAfter(
+                delayInterval,
+                () => CountDownEnded());
 
 
-                Console.ReadKey();
+            Console.ReadKey();
 
         }
 
@@ -37,6 +44,5 @@ namespace GoudKoorts
             return Task.Delay(delay).ContinueWith(_ => action());
         }
 
-
-        }
     }
+}
