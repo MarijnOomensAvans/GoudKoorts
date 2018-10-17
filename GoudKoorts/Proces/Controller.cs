@@ -28,7 +28,8 @@ namespace GoudKoorts
 
         private void CountDownEnded()
         {
-            map.MoveCarts();
+            //map.MoveCarts();
+            OutputView.DrawMap(map);
             CountDown();
         }
 
