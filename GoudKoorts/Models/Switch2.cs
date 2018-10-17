@@ -12,7 +12,7 @@ namespace GoudKoorts.Models
         private Track _prevUp;
         private Track _prevDown;
 
-        private Track _previous;
+        public Track Previous { get; set; }
 
         public Switch2(Track prevTrackUp, Track prevTrackDown)
         {
@@ -40,15 +40,15 @@ namespace GoudKoorts.Models
         {
             if (Movable == null)
             {
-                if (_previous == _prevUp)
+                if (Previous == _prevUp)
                 {
-                    _previous.Next = null;
-                    _previous = _prevDown;
+                    Previous.Next = null;
+                    Previous = _prevDown;
                 }
                 else
                 {
-                    _previous.Next = null;
-                    _previous = _prevUp;
+                    Previous.Next = null;
+                    Previous = _prevUp;
                 }
             }
             
@@ -56,7 +56,15 @@ namespace GoudKoorts.Models
 
         public override char Print()
         {
-            return 'S';
+            if (Previous == _prevDown)
+            {
+                return '╔';
+            }
+            if (Previous == _prevUp)
+            {
+                return '╚';
+            }
+            return 'Q';
         }
     }
 }
