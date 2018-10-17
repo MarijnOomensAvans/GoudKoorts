@@ -5,7 +5,7 @@ using System.Text;
 
 namespace GoudKoorts
 {
-    public class MinceCart : Movable
+    public class MineCart : Movable
     {
         public override char Print()
         {

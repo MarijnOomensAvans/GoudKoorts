@@ -14,7 +14,7 @@ namespace GoudKoorts
 
         public void SpawnMineCart()
         {
-            Movable = new MinceCart();
+            Movable = new MineCart();
         }
 
         public override char Print()

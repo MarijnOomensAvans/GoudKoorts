@@ -43,16 +43,16 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="DefaultTrack.cs" />
-    <Compile Include="EmptySpace.cs" />
-    <Compile Include="EndField.cs" />
+    <Compile Include="Models\DefaultTrack.cs" />
+    <Compile Include="Models\EmptySpace.cs" />
+    <Compile Include="Models\EndField.cs" />
     <Compile Include="Models\Boat.cs" />
     <Compile Include="Models\Switch2.cs" />
     <Compile Include="Proces\Controller.cs" />
     <Compile Include="Models\Harbour.cs" />
     <Compile Include="View\InputView.cs" />
     <Compile Include="Models\Map.cs" />
-    <Compile Include="Models\MinceCart.cs" />
+    <Compile Include="Models\MineCart.cs" />
     <Compile Include="Models\Movable.cs" />
     <Compile Include="View\OutputView.cs" />
     <Compile Include="Proces\Program.cs" />
