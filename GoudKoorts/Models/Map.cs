@@ -9,5 +9,10 @@ namespace GoudKoorts
     {
         private SpawnPoint[] spawnPoints;
 
+        public Map()
+        {
+
+        }
+
     }
 }

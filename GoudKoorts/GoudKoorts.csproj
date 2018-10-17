@@ -47,6 +47,7 @@
     <Compile Include="EmptySpace.cs" />
     <Compile Include="EndField.cs" />
     <Compile Include="Models\Boat.cs" />
+    <Compile Include="Models\Switch2.cs" />
     <Compile Include="Proces\Controller.cs" />
     <Compile Include="Models\Harbour.cs" />
     <Compile Include="View\InputView.cs" />
