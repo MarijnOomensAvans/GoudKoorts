@@ -11,14 +11,46 @@ namespace GoudKoorts
         private Track _nextUp;
         private Track _nextDown;
 
-        public Switch()
+        public Switch(Track nextUp,Track nextDown)
         {
-            Next = _nextUp;
+            _nextUp = nextUp;
+            _nextDown = nextDown;
         }
 
-    public override char Print()
+        public void SwitchSwitch()
+        {
+            if (Movable == null)
+            {
+                if (Next == _nextUp)
+                {
+                    Next = _nextDown;
+                }
+                else
+                {
+                    Next = _nextUp;
+                }
+            }
+        }
+
+        public override char Print()
         {
             return 'S';
+        }
+
+        public override bool MoveTo(Movable movable)
+        {
+            if (Movable != null)
+            {
+                if (Next.MoveTo(movable))
+                {
+                    Movable = movable;
+                    return true;
+                }
+
+                return false;
+            }
+            Movable = movable;
+            return true;
         }
     }
 }

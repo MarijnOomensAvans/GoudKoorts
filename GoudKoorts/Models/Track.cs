@@ -9,8 +9,11 @@ namespace GoudKoorts
     {
         public virtual Track Next { get; set; }
 
-        private Movable _movable;
+        public Movable Movable { get; set; }
 
         public abstract char Print();
+
+        public abstract bool MoveTo(Movable movable);
+
     }
 }

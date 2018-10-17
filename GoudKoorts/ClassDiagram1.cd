@@ -34,7 +34,7 @@
   <Class Name="GoudKoorts.Controller">
     <Position X="3.75" Y="3" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAEAAAAAAAAAAAAAIAAAAAAAAAAAAAAAAEAAAAAAA=</HashCode>
+      <HashCode>AABAEAAAAAAAAAAAAAISAAAAAAAAAAgAAAAEAAAAAAA=</HashCode>
       <FileName>Proces\Controller.cs</FileName>
     </TypeIdentifier>
     <ShowAsAssociation>
@@ -46,24 +46,21 @@
   <Class Name="GoudKoorts.Track">
     <Position X="9.75" Y="5.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AgAAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAAAEAAA=</HashCode>
+      <HashCode>AgAAAAAQAAAAAAAAAAAAAAAAAAAIAAAAAAAAAAAEAAA=</HashCode>
       <FileName>Models\Track.cs</FileName>
     </TypeIdentifier>
-    <ShowAsAssociation>
-      <Field Name="_movable" />
-    </ShowAsAssociation>
   </Class>
   <Class Name="GoudKoorts.SpawnPoint">
     <Position X="7.5" Y="8" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEAAA=</HashCode>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAIAAAAAAAAAAAEAAA=</HashCode>
       <FileName>Models\SpawnPoint.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="GoudKoorts.Switch">
     <Position X="9.25" Y="8" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEAAA=</HashCode>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAACAAICAAAAAAAAAAEAAA=</HashCode>
       <FileName>Models\Switch.cs</FileName>
     </TypeIdentifier>
   </Class>
@@ -91,42 +88,42 @@
   <Class Name="GoudKoorts.Harbour">
     <Position X="11" Y="8" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEAAA=</HashCode>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAIAAAAAAAAAAAEAAA=</HashCode>
       <FileName>Models\Harbour.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="GoudKoorts.Water">
     <Position X="12.75" Y="8" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEAAA=</HashCode>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAIAAAAAAAAAAAEAAA=</HashCode>
       <FileName>Models\Water.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="GoudKoorts.Shunt">
     <Position X="14.5" Y="8" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEAAA=</HashCode>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAIAAAAAAAAAAAEAAA=</HashCode>
       <FileName>Models\Shunt.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="GoudKoorts.EmptySpace">
     <Position X="16.25" Y="8" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEAAA=</HashCode>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAIAAAAAAAAAAAEAAA=</HashCode>
       <FileName>EmptySpace.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="GoudKoorts.EndField">
     <Position X="18" Y="9.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <HashCode>AgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>EndField.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="GoudKoorts.DefaultTrack">
     <Position X="18" Y="8" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEAAA=</HashCode>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAIAAAAAAAAAAAEAAA=</HashCode>
       <FileName>DefaultTrack.cs</FileName>
     </TypeIdentifier>
   </Class>
