@@ -9,6 +9,11 @@ namespace GoudKoorts
     {
         public void DrawMap(Map map)
         {
+            Console.Clear();
+            Console.WriteLine("┌─────────────┐");
+            Console.WriteLine("| Goudkoorts  |");
+            Console.WriteLine("└─────────────┘");
+            Console.WriteLine("────────────────────────");
             foreach (Track t in map.Row1)
             {
                 Console.Write(t.Print());
@@ -33,6 +38,8 @@ namespace GoudKoorts
             {
                 Console.Write(t.Print());
             }
+            Console.WriteLine("");
+            Console.WriteLine("────────────────────────");
         }
     }
 }
