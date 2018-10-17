@@ -53,6 +53,8 @@ namespace GoudKoorts
             DT6.Next = DT9;
 
             Switch2 S1 = new Switch2(DT7, DT8);
+            DT7.Next = S1;
+            S1.Previous = DT8;
             DT8.Next = S1;
 
             DefaultTrack DT10 = new DefaultTrack();
@@ -61,6 +63,7 @@ namespace GoudKoorts
             DefaultTrack DT11 = new DefaultTrack();
             DefaultTrack DT12 = new DefaultTrack();
             Switch S2 = new Switch(DT11, DT12);
+            DT10.Next = S2;
             S2.Next = DT11;
 
             DefaultTrack DT13 = new DefaultTrack();
@@ -73,7 +76,7 @@ namespace GoudKoorts
             DefaultTrack DT16 = new DefaultTrack();
             DT15.Next = DT16;
             DefaultTrack DT17 = new DefaultTrack();
-            DT15.Next = DT17;
+            DT16.Next = DT17;
 
             DefaultTrack DT32 = new DefaultTrack();
             DT9.Next = DT32;
@@ -83,6 +86,9 @@ namespace GoudKoorts
             DT33.Next = DT34;
 
             Switch2 S3 = new Switch2(DT14, DT34);
+            DT14.Next = S3;
+            DT34.Next = S3;
+            S3.Previous = DT14;
             DefaultTrack DT20 = new DefaultTrack();
             S3.Next = DT20;
 
@@ -125,6 +131,8 @@ namespace GoudKoorts
             SH7.Next = SH8;
 
             Switch2 S5 = new Switch2(DT17, DT19);
+            S5.Previous = DT17;
+            DT19.Next = S1;
             DT17.Next = S1;
 
             DefaultTrack DT21 = new DefaultTrack();
@@ -236,10 +244,13 @@ namespace GoudKoorts
             Row5[22] = SH8;
         }
 
+        internal void SwitchSwitch(int v)
+        {
+            throw new NotImplementedException();
+        }
+
         internal void MoveCarts()
         {
-
-
             //Spawn a minecart at a random spawnpoint
             Random rand = new Random();
             int randomNumber = rand.Next(3);

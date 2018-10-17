@@ -34,8 +34,17 @@ namespace GoudKoorts
 
         public override char Print()
         {
+            if (Next == _nextUp)
+            {
+                return '╝';
+            }
+            if (Next == _nextDown)
+            {
+                return '╗';
+            }
             return 'S';
         }
+
 
         public override bool MoveTo(Movable movable)
         {
