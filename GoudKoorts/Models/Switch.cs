@@ -13,7 +13,14 @@ namespace GoudKoorts
 
         public Switch()
         {
-            Next = _nextUp;
+            if (Next == _nextDown)
+            {
+                Next = _nextUp;
+            }
+            else
+            {
+                Next = _nextDown;
+            }
         }
 
     public override char Print()
