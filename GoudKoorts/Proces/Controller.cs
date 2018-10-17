@@ -6,7 +6,6 @@ using System.Threading.Tasks;
 namespace GoudKoorts
 {
 
-
     public class Controller
     {
         private InputView InputView;
@@ -29,13 +28,7 @@ namespace GoudKoorts
             var runningTask = DoActionAfter(
                 delayInterval,
                 () => CountDownEnded());
-        }
 
-        private void CountDownEnded()
-        {
-            //map.MoveCarts();
-            OutputView.DrawMap(map);
-            InputView.PrintControls();
             int result = InputView.GetSwitchNumber();
             switch (result)
             {
@@ -58,7 +51,13 @@ namespace GoudKoorts
                     map.SwitchSwitch(5);
                     break;
             }
+        }
 
+        private void CountDownEnded()
+        {
+            map.MoveCarts();
+            OutputView.DrawMap(map);
+            InputView.PrintControls();
             _waitTime -= 100;
             CountDown();
         }
