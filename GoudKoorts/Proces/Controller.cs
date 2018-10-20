@@ -2,6 +2,7 @@
 using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
+using System.Timers;
 
 namespace GoudKoorts
 {
@@ -12,6 +13,8 @@ namespace GoudKoorts
         private OutputView OutputView;
         private Map map;
         private int _waitTime = 8000;
+        System.Timers.Timer MyTimer;
+        private bool Playing;
 
         public Controller()
         {
@@ -19,52 +22,60 @@ namespace GoudKoorts
             OutputView = new OutputView();
             map = new Map();
             OutputView.DrawMap(map);
-            InputView.PrintControls();
+            OutputView.PrintControls();
+
+            MyTimer = new System.Timers.Timer();
+            MyTimer.Elapsed += new ElapsedEventHandler(OnTimedEvent);
         }
 
-        public void CountDown()
+        public void Start()
         {
-            var delayInterval = TimeSpan.FromMilliseconds(_waitTime);
-            var runningTask = DoActionAfter(
-                delayInterval,
-                () => CountDownEnded());
-
-            int result = InputView.GetSwitchNumber();
-            switch (result)
-            {
-                case -1:
-                    Environment.Exit(0);
-                    break;
-                case 1:
-                    map.SwitchSwitch(1);
-                    break;
-                case 2:
-                    map.SwitchSwitch(2);
-                    break;
-                case 3:
-                    map.SwitchSwitch(3);
-                    break;
-                case 4:
-                    map.SwitchSwitch(4);
-                    break;
-                case 5:
-                    map.SwitchSwitch(5);
-                    break;
+            MyTimer.Interval = _waitTime;
+            MyTimer.Enabled = true;
+            Playing = true;
+            while (Playing) {
+                int result = InputView.GetSwitchNumber();
+                switch (result)
+                {
+                    case -1:
+                        Environment.Exit(0);
+                        break;
+                    case 1:
+                        map.SwitchSwitch(1);
+                        break;
+                    case 2:
+                        map.SwitchSwitch(2);
+                        break;
+                    case 3:
+                        map.SwitchSwitch(3);
+                        break;
+                    case 4:
+                        map.SwitchSwitch(4);
+                        break;
+                    case 5:
+                        map.SwitchSwitch(5);
+                        break;
+                }
+            
             }
         }
 
-        private void CountDownEnded()
+        private void TimerEnd()
         {
-            map.MoveCarts();
+            Playing = false;
+            map.SpawnCarts();
             OutputView.DrawMap(map);
-            InputView.PrintControls();
-            _waitTime -= 100;
-            CountDown();
+            OutputView.PrintControls();
+            if (_waitTime > 1600) //cant have it go down indefinately
+            {
+                _waitTime -= 200;
+            }            
         }
 
-        private Task DoActionAfter(TimeSpan delay, Action action)
+        private void OnTimedEvent(object source, ElapsedEventArgs e)
         {
-            return Task.Delay(delay).ContinueWith(_ => action());
+            TimerEnd();
+            Start();
         }
 
     }

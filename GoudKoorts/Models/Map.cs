@@ -135,8 +135,8 @@ namespace GoudKoorts
 
             Switch2 S5 = new Switch2(DT17, DT19);
             S5.Previous = DT17;
-            DT19.Next = S1;
-            DT17.Next = S1;
+            DT19.Next = S5;
+            DT17.Next = S5;
 
             DefaultTrack DT21 = new DefaultTrack();
             S5.Next = DT21;
@@ -165,7 +165,7 @@ namespace GoudKoorts
             EndField EI = new EndField();
             DT31.Next = EI;
 
-            //fill switches
+            //fill switches list
             Switches[0] = S1;
             Switches[1] = S2;
             Switches[2] = S3;
@@ -256,11 +256,10 @@ namespace GoudKoorts
 
         internal void SwitchSwitch(int v)
         {
-            int Index = v - 1;
-            Switches[Index].SwitchSwitch();
+            Switches[v - 1].SwitchSwitch();
         }
 
-        internal void MoveCarts()
+        internal void SpawnCarts()
         {
             //Spawn a minecart at a random spawnpoint
             Random rand = new Random();

@@ -10,7 +10,7 @@ namespace GoudKoorts
     {
         static void Main(string[] args)
         {
-            new Controller().CountDown();
+            new Controller().Start();
             Console.ReadKey();
         }
     }

@@ -7,11 +7,7 @@ namespace GoudKoorts
 {
     public class InputView
     {
-        public void PrintControls()
-        {
-            Console.WriteLine("Press 1-5 to switch to switch switches (direction left-right, first from the left is 1 etc.)");
-        }
-
+        
         public int GetSwitchNumber()
         {                           
             bool pressed = false;
@@ -43,7 +39,7 @@ namespace GoudKoorts
                         pressed = true;
                         break;
                     case ConsoleKey.D5:
-                        result = 4;
+                        result = 5;
                         pressed = true;
                         break;
                     default:
