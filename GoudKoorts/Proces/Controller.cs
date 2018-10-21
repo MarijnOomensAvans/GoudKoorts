@@ -78,6 +78,7 @@ namespace GoudKoorts
         private void TimerEnd()
         {
             Playing = false;
+            map.MoveMovables();
             map.SpawnCarts();
             OutputView.DrawMap(map);
             OutputView.PrintControls();

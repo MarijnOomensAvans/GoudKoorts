@@ -7,6 +7,10 @@ namespace GoudKoorts
 {
     public abstract class Movable
     {
+        public Track onTrack;
+
         public abstract char Print();
+
+        public abstract void Move();
     }
 }

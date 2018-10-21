@@ -17,6 +17,7 @@ namespace GoudKoorts
             if (Movable == null)
             {
                 Movable = new MineCart();
+                Movable.onTrack = this;
                 return Movable;
             }
 

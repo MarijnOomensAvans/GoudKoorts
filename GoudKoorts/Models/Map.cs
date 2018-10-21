@@ -10,6 +10,7 @@ namespace GoudKoorts
     {
         private SpawnPoint[] spawnPoints;
         private AbstractSwitch[] Switches;
+        private List<Movable> mineCarts;
 
         public Track[] Row1 { get; }
         public Track[] Row2 { get; }
@@ -21,6 +22,7 @@ namespace GoudKoorts
         {
             Switches = new AbstractSwitch[5];
             spawnPoints = new SpawnPoint[3];
+            mineCarts = new List<Movable>();
             Row1 = new Track[10];
             Row2 = new Track[23];
             Row3 = new Track[10];
@@ -254,17 +256,28 @@ namespace GoudKoorts
             Row5[22] = SH8;
         }
 
+
         internal void SwitchSwitch(int v)
         {
             Switches[v - 1].SwitchSwitch();
         }
 
+        internal void MoveMovables()
+        {
+            foreach (Movable m in mineCarts)
+            {
+                if (m != null) {
+                    m.Move();
+                }
+            }
+        }
+
         internal void SpawnCarts()
         {
-            //Spawn a minecart at a random spawnpoint
+            //Spawns a minecart at a random spawnpoint
             Random rand = new Random();
             int randomNumber = rand.Next(3);
-            spawnPoints[randomNumber].SpawnMineCart();
+            mineCarts.Add(spawnPoints[randomNumber].SpawnMineCart());
         }
     }
 }

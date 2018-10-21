@@ -7,6 +7,11 @@ namespace GoudKoorts
 {
     public class Boat : Movable
     {
+        public override void Move()
+        {
+            throw new NotImplementedException();
+        }
+
         public override char Print()
         {
             return 'B';
