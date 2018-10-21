@@ -7,7 +7,7 @@ namespace GoudKoorts
 {
     public class Water : Track
     {
-        public override bool MoveTo(Movable movable)
+        public override bool MoveToThis(Movable movable)
         {
             throw new NotImplementedException();
         }

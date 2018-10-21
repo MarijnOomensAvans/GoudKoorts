@@ -7,14 +7,23 @@ namespace GoudKoorts
 {
     public class MineCart : Movable
     {
-        public override void Move()
+        public MineCart(Track t)
         {
-            var prevTrack = this.onTrack;
-            if(this.onTrack.Next.MoveTo(this))
+            onTrack = t;
+        }
+
+        public override bool Move()
+        {            
+            if (onTrack.Next == null)
             {
-                prevTrack.Movable = null;
+                return true;
             }
-            
+            if(onTrack.Next.MoveToThis(this))
+            {
+                return true;
+            }
+
+            return false;
         }
 
         public override char Print()

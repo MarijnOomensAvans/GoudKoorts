@@ -7,9 +7,9 @@ namespace GoudKoorts
 {
     public class EmptySpace : Track
     {
-        public override bool MoveTo(Movable movable)
+        public override bool MoveToThis(Movable movable)
         {
-            throw new NotImplementedException();
+            return false;
         }
 
         public override char Print()

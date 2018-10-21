@@ -47,5 +47,11 @@ namespace GoudKoorts
             Console.WriteLine("Press 1-5 to switch to switch switches (direction left-right, first from the left is 1 etc.)");
             Console.WriteLine("Or press S to stop");
         }
+
+        internal void ShowEndScreen()
+        {
+            Console.WriteLine("A cart has crashed into another one! You died.");
+            Console.WriteLine("Press any key to exit");
+        }
     }
 }

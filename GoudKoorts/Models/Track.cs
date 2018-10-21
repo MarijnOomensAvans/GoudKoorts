@@ -13,7 +13,7 @@ namespace GoudKoorts
 
         public abstract char Print();
 
-        public abstract bool MoveTo(Movable movable);
+        public abstract bool MoveToThis(Movable movable);
 
     }
 }

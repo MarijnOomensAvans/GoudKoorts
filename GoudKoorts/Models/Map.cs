@@ -58,7 +58,6 @@ namespace GoudKoorts
             DT6.Next = DT9;
 
             Switch2 S1 = new Switch2(DT7, DT8);
-            DT7.Next = S1;
             S1.Previous = DT8;
             DT8.Next = S1;
 
@@ -91,7 +90,6 @@ namespace GoudKoorts
             DT33.Next = DT34;
 
             Switch2 S3 = new Switch2(DT14, DT34);
-            DT14.Next = S3;
             DT34.Next = S3;
             S3.Previous = DT14;
             DefaultTrack DT20 = new DefaultTrack();
@@ -137,7 +135,6 @@ namespace GoudKoorts
 
             Switch2 S5 = new Switch2(DT17, DT19);
             S5.Previous = DT17;
-            DT19.Next = S5;
             DT17.Next = S5;
 
             DefaultTrack DT21 = new DefaultTrack();
@@ -262,22 +259,25 @@ namespace GoudKoorts
             Switches[v - 1].SwitchSwitch();
         }
 
-        internal void MoveMovables()
+        internal bool MoveMovables()
         {
             foreach (Movable m in mineCarts)
-            {
-                if (m != null) {
-                    m.Move();
-                }
+            {                
+                    if (!m.Move())
+                    {
+                        return false;
+                    }                
             }
+            return true;
         }
 
-        internal void SpawnCarts()
+        internal void SpawnCart()
         {
             //Spawns a minecart at a random spawnpoint
             Random rand = new Random();
             int randomNumber = rand.Next(3);
-            mineCarts.Add(spawnPoints[randomNumber].SpawnMineCart());
+            Movable m = spawnPoints[randomNumber].SpawnMineCart();
+            mineCarts.Add(m);
         }
     }
 }

@@ -7,13 +7,25 @@ namespace GoudKoorts
 {
     public class Harbour : Track
     {
-        public override bool MoveTo(Movable movable)
+        public override bool MoveToThis(Movable movable)
         {
-            throw new NotImplementedException();
+            if (Movable == null)
+            {
+                Movable = movable;
+                movable.onTrack.Movable = null;
+                movable.onTrack = this;
+                return true;
+            }
+
+            return false;
         }
 
         public override char Print()
         {
+            if (Movable != null)
+            {
+                return Movable.Print();
+            }
             return 'H';
         }
     }

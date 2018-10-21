@@ -12,10 +12,10 @@ namespace GoudKoorts
         private InputView InputView;
         private OutputView OutputView;
         private Map map;
-        private int _waitTime = 8000;
-        System.Timers.Timer MyTimer;
+        private int _waitTime = 4000;
+        private System.Timers.Timer MyTimer;
         private bool Playing;
-
+        
         public Controller()
         {
             InputView = new InputView();
@@ -78,14 +78,36 @@ namespace GoudKoorts
         private void TimerEnd()
         {
             Playing = false;
-            map.MoveMovables();
-            map.SpawnCarts();
+            MyTimer.Enabled = false;
+
+            bool notCrashed = map.MoveMovables();
+            if (!notCrashed)
+            {
+                CollisionTriggered();
+            }
+            OutputView.DrawMap(map);
+
+            Random r = new Random();
+            int b = r.Next(2); // TODO makes testing easier. Remove afterwards!
+            if (b == 1)
+            {
+                map.SpawnCart();
+            }
+            
             OutputView.DrawMap(map);
             OutputView.PrintControls();
             if (_waitTime > 1600) //cant have it go down indefinately
             {
-                _waitTime -= 200;
+                _waitTime -= 100;
             }            
+        }
+
+        private void CollisionTriggered()
+        {
+            MyTimer.Enabled = false;
+            OutputView.ShowEndScreen();
+            Console.ReadKey();
+            Environment.Exit(0);
         }
 
         private void OnTimedEvent(object source, ElapsedEventArgs e)

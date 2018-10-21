@@ -20,20 +20,17 @@ namespace GoudKoorts.Models
             _prevDown = prevTrackDown;
         }
 
-        public override bool MoveTo(Movable movable)
+        public override bool MoveToThis(Movable movable)
         {
-            if (Movable != null)
+            if (Movable == null)
             {
-                if (Next.MoveTo(movable))
-                {
-                    Movable = movable;
-                    return true;
-                }
-
-                return false;
+                Movable = movable;
+                movable.onTrack.Movable = null;
+                movable.onTrack = this;
+                return true;
             }
-            Movable = movable;
-            return true;
+
+            return false;
         }
 
         public override void SwitchSwitch()
@@ -42,12 +39,12 @@ namespace GoudKoorts.Models
             {
                 if (Previous == _prevUp)
                 {
-                    Previous.Next = null;
+                    _prevUp.Next = null;
                     Previous = _prevDown;
                 }
                 else
                 {
-                    Previous.Next = null;
+                    _prevDown.Next = null;
                     Previous = _prevUp;
                 }
             }
@@ -56,6 +53,10 @@ namespace GoudKoorts.Models
 
         public override char Print()
         {
+            if (Movable != null)
+            {
+                return Movable.Print();
+            }
             if (Previous == _prevDown)
             {
                 return '╔';

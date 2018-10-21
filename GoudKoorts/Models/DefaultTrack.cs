@@ -7,26 +7,22 @@ namespace GoudKoorts
 {
     public class DefaultTrack : Track
     {
-        public override bool MoveTo(Movable movable)
+        public override bool MoveToThis(Movable movable)
         {
-            if (Movable != null)
+            if (Movable == null)
             {
-                if (Next.MoveTo(movable))
-                {
-                    Movable = movable;
-                    return true;
-                }
-
-                return false;
+                Movable = movable;
+                movable.onTrack.Movable = null;
+                movable.onTrack = this;
+                return true;
             }
-            Movable = movable;
-            return true;
 
+            return false;
         }
 
         public override char Print()
         {
-            if(Movable == null)
+            if (Movable == null)
             {
                 return '=';
             }

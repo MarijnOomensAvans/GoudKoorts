@@ -11,6 +11,6 @@ namespace GoudKoorts
 
         public abstract char Print();
 
-        public abstract void Move();
+        public abstract bool Move();
     }
 }

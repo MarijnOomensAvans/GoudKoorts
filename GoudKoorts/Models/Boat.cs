@@ -7,7 +7,7 @@ namespace GoudKoorts
 {
     public class Boat : Movable
     {
-        public override void Move()
+        public override bool Move()
         {
             throw new NotImplementedException();
         }

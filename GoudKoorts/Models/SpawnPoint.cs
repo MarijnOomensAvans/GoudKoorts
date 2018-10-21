@@ -7,7 +7,7 @@ namespace GoudKoorts
 {
     public class SpawnPoint : Track
     {
-        public override bool MoveTo(Movable movable)
+        public override bool MoveToThis(Movable movable)
         {
             return false;
         }
@@ -16,12 +16,9 @@ namespace GoudKoorts
         {
             if (Movable == null)
             {
-                Movable = new MineCart();
-                Movable.onTrack = this;
-                return Movable;
+                Movable = new MineCart(this);            
             }
-
-            return null;
+            return Movable;
         }
 
         public override char Print()

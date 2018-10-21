@@ -7,7 +7,7 @@ namespace GoudKoorts
 {
     public class Switch : AbstractSwitch
     {
-        //Switch has 2 nexts so is can switch
+        //Switch has 2 nexts so it can switch
         private Track _nextUp;
         private Track _nextDown;
 
@@ -34,6 +34,10 @@ namespace GoudKoorts
 
         public override char Print()
         {
+            if (Movable != null)
+            {
+                return Movable.Print();
+            }
             if (Next == _nextUp)
             {
                 return '╝';
@@ -46,20 +50,17 @@ namespace GoudKoorts
         }
 
 
-        public override bool MoveTo(Movable movable)
+        public override bool MoveToThis(Movable movable)
         {
-            if (Movable != null)
+            if (Movable == null)
             {
-                if (Next.MoveTo(movable))
-                {
-                    Movable = movable;
-                    return true;
-                }
-
-                return false;
+                Movable = movable;
+                movable.onTrack.Movable = null;
+                movable.onTrack = this;
+                return true;
             }
-            Movable = movable;
-            return true;
+
+            return false;
         }
     }
 }
