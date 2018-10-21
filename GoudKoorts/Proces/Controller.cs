@@ -42,18 +42,33 @@ namespace GoudKoorts
                         break;
                     case 1:
                         map.SwitchSwitch(1);
+                        Console.Clear();
+                        OutputView.DrawMap(map);
+                        OutputView.PrintControls();
                         break;
                     case 2:
                         map.SwitchSwitch(2);
+                        Console.Clear();
+                        OutputView.DrawMap(map);
+                        OutputView.PrintControls();
                         break;
                     case 3:
                         map.SwitchSwitch(3);
+                        Console.Clear();
+                        OutputView.DrawMap(map);
+                        OutputView.PrintControls();
                         break;
                     case 4:
                         map.SwitchSwitch(4);
+                        Console.Clear();
+                        OutputView.DrawMap(map);
+                        OutputView.PrintControls();
                         break;
                     case 5:
                         map.SwitchSwitch(5);
+                        Console.Clear();
+                        OutputView.DrawMap(map);
+                        OutputView.PrintControls();
                         break;
                 }
             
