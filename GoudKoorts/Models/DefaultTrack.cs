@@ -26,7 +26,11 @@ namespace GoudKoorts
 
         public override char Print()
         {
-            return '=';
+            if(Movable == null)
+            {
+                return '=';
+            }
+            return Movable.Print();
         }
     }
 }
