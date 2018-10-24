@@ -17,13 +17,14 @@ namespace GoudKoorts
         public Track[] Row3 { get; }
         public Track[] Row4 { get; }
         public Track[] Row5 { get; }
+        public Water[] ShipRoute { get; }
 
         public Map()
         {
             Switches = new AbstractSwitch[5];
             spawnPoints = new SpawnPoint[3];
             mineCarts = new List<Movable>();
-            Row1 = new Track[10];
+            Row1 = new Track[23];
             Row2 = new Track[23];
             Row3 = new Track[10];
             Row4 = new Track[9];
@@ -90,7 +91,7 @@ namespace GoudKoorts
             DT33.Next = DT34;
 
             Switch2 S3 = new Switch2(DT14, DT34);
-            DT34.Next = S3;
+            DT14.Next = S3;
             S3.Previous = DT14;
             DefaultTrack DT20 = new DefaultTrack();
             S3.Next = DT20;
@@ -164,6 +165,16 @@ namespace GoudKoorts
             EndField EI = new EndField();
             DT31.Next = EI;
 
+            //make water tiles and add to list
+            Water W1 = new Water();
+            Water W2 = new Water();
+            Water W3 = new Water();
+            Water W4 = new Water();
+            Water W5 = new Water();
+            Water W6 = new Water();
+            Water W8 = new Water();
+            Water W9 = new Water();
+
             //fill switches list
             Switches[0] = S1;
             Switches[1] = S2;
@@ -182,6 +193,19 @@ namespace GoudKoorts
             Row1[7] = DT15;
             Row1[8] = DT16;
             Row1[9] = DT17;
+            Row1[10] = new EmptySpace();
+            Row1[11] = new EmptySpace();
+            Row1[12] = new EmptySpace();
+            Row1[13] = new EmptySpace();
+            Row1[14] = new EmptySpace();
+            Row1[15] = new Water();
+            Row1[16] = new Water();
+            Row1[17] = new Water();
+            Row1[18] = new Water();
+            Row1[19] = new Water();
+            Row1[20] = new Water();
+            Row1[21] = new Water();
+            Row1[22] = new Water();
 
             Row2[0] = new EmptySpace();
             Row2[1] = new EmptySpace();
