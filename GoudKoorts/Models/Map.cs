@@ -10,20 +10,22 @@ namespace GoudKoorts
     {
         private SpawnPoint[] spawnPoints;
         private AbstractSwitch[] Switches;
-        private List<Movable> mineCarts;
+        private List<Movable> Movables;
+        private Track[] ShipRoute;
 
         public Track[] Row1 { get; }
         public Track[] Row2 { get; }
         public Track[] Row3 { get; }
         public Track[] Row4 { get; }
         public Track[] Row5 { get; }
-        public Water[] ShipRoute { get; }
 
         public Map()
         {
             Switches = new AbstractSwitch[5];
             spawnPoints = new SpawnPoint[3];
-            mineCarts = new List<Movable>();
+            Movables = new List<Movable>();
+            ShipRoute = new Track[8];
+
             Row1 = new Track[23];
             Row2 = new Track[23];
             Row3 = new Track[10];
@@ -167,13 +169,29 @@ namespace GoudKoorts
 
             //make water tiles and add to list
             Water W1 = new Water();
-            Water W2 = new Water();
+            WaterHarbour W2 = new WaterHarbour();
             Water W3 = new Water();
             Water W4 = new Water();
             Water W5 = new Water();
             Water W6 = new Water();
-            Water W8 = new Water();
-            Water W9 = new Water();
+            Water W7 = new Water();
+            WaterEnd W8 = new WaterEnd();
+            ShipRoute[0] = W1;
+            ShipRoute[1] = W2;
+            ShipRoute[2] = W3;
+            ShipRoute[3] = W4;
+            ShipRoute[4] = W5;
+            ShipRoute[5] = W6;
+            ShipRoute[6] = W7;
+            ShipRoute[7] = W8;
+
+            W1.Next = W2;
+            W2.Next = W3;
+            W3.Next = W4;
+            W4.Next = W5;
+            W5.Next = W6;
+            W6.Next = W7;
+            W7.Next = W8;
 
             //fill switches list
             Switches[0] = S1;
@@ -198,14 +216,14 @@ namespace GoudKoorts
             Row1[12] = new EmptySpace();
             Row1[13] = new EmptySpace();
             Row1[14] = new EmptySpace();
-            Row1[15] = new Water();
-            Row1[16] = new Water();
-            Row1[17] = new Water();
-            Row1[18] = new Water();
-            Row1[19] = new Water();
-            Row1[20] = new Water();
-            Row1[21] = new Water();
-            Row1[22] = new Water();
+            Row1[15] = W1;
+            Row1[16] = W2;
+            Row1[17] = W3;
+            Row1[18] = W4;
+            Row1[19] = W5;
+            Row1[20] = W6;
+            Row1[21] = W7;
+            Row1[22] = W8;
 
             Row2[0] = new EmptySpace();
             Row2[1] = new EmptySpace();
@@ -278,14 +296,14 @@ namespace GoudKoorts
         }
 
 
-        internal void SwitchSwitch(int v)
+        public void SwitchSwitch(int v)
         {
             Switches[v - 1].SwitchSwitch();
         }
 
-        internal bool MoveMovables()
+        public bool MoveMovables()
         {
-            foreach (Movable m in mineCarts)
+            foreach (Movable m in Movables)
             {                
                     if (!m.Move())
                     {
@@ -295,12 +313,23 @@ namespace GoudKoorts
             return true;
         }
 
-        internal void SpawnCart()
+        public void SpawnCart()
         {
             //Spawns a minecart at a random spawnpoint
             Random rand = new Random();
             int randomNumber = rand.Next(-2,3);
-            mineCarts.Add(spawnPoints[randomNumber].SpawnMineCart());
+            Movables.Add(spawnPoints[randomNumber].SpawnMineCart());
+        }
+
+        public void SpawnShip()
+        {
+            Random rand = new Random();
+            int randomNumber = rand.Next(-2, 9);
+            if (randomNumber == 4)
+            {
+                ShipRoute[0].Movable = new Boat();
+                Movables.Add(ShipRoute[0].Movable);
+            }
         }
     }
 }

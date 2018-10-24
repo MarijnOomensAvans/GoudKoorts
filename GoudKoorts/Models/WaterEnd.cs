@@ -2,14 +2,18 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Threading.Tasks;
 
-namespace GoudKoorts
+namespace GoudKoorts.Models
 {
-    public class Water : Track
+    class WaterEnd : Track
     {
+        public override Track Next => null;
+
         public override bool MoveToThis(Movable movable)
         {
-            throw new NotImplementedException();
+            movable.onTrack.Movable = null;
+            return true;
         }
 
         public override char Print()

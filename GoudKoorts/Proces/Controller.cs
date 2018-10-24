@@ -12,7 +12,7 @@ namespace GoudKoorts
         private InputView InputView;
         private OutputView OutputView;
         private Map map;
-        private int _waitTime = 100;
+        private int _waitTime = 1000;
         private System.Timers.Timer MyTimer;
         private bool Playing;
         
@@ -92,6 +92,7 @@ namespace GoudKoorts
             if (b == 1)
             {
                 map.SpawnCart();
+                map.SpawnShip();
             }
             
             OutputView.DrawMap(map);

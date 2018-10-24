@@ -10,7 +10,7 @@ namespace GoudKoorts.Models
     {
         public override bool MoveToThis(Movable movable)
         {
-            if (movable)
+            throw new NotImplementedException();
         }
 
         public override char Print()

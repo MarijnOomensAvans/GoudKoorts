@@ -49,6 +49,7 @@
     <Compile Include="Models\EndField.cs" />
     <Compile Include="Models\Boat.cs" />
     <Compile Include="Models\Switch2.cs" />
+    <Compile Include="Models\WaterEnd.cs" />
     <Compile Include="Models\WaterHarbour.cs" />
     <Compile Include="Proces\Controller.cs" />
     <Compile Include="Models\Harbour.cs" />
