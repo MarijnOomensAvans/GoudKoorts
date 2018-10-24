@@ -7,7 +7,6 @@ namespace GoudKoorts
 {
     public class MineCart : Movable
     {
-        private bool _load;
 
         public MineCart(Track t)
         {
