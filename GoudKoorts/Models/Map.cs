@@ -275,9 +275,8 @@ namespace GoudKoorts
         {
             //Spawns a minecart at a random spawnpoint
             Random rand = new Random();
-            int randomNumber = rand.Next(3);
-            Movable m = spawnPoints[randomNumber].SpawnMineCart();
-            mineCarts.Add(m);
+            int randomNumber = rand.Next(-2,3);
+            mineCarts.Add(spawnPoints[randomNumber].SpawnMineCart());
         }
     }
 }
