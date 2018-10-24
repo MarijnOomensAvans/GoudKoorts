@@ -7,6 +7,8 @@ namespace GoudKoorts
 {
     public abstract class Movable
     {
+        protected bool _load;
+
         public Track onTrack;
 
         public abstract char Print();
