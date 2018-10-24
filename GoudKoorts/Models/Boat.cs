@@ -7,12 +7,10 @@ namespace GoudKoorts
 {
     public class Boat : Movable
     {
-        public int LoadInShip { get; set; }
 
         public Boat()
         {
-            LoadInShip = 0;
-            load = false;
+            load = 0;
         }
 
         public override bool Move()
@@ -31,7 +29,13 @@ namespace GoudKoorts
 
         public override char Print()
         {
-            return Convert.ToChar(LoadInShip);
+            if (load == 0)
+            {
+                return 'B';
+            }
+            string printString = "" + load;
+            char print = printString[0];
+            return print;
         }
     }
 }

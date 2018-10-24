@@ -169,8 +169,9 @@ namespace GoudKoorts
 
             //make water tiles and add to list
             Water W1 = new Water();
-            WaterHarbour W2 = new WaterHarbour();
-            Water W3 = new Water();
+            Water W2 = new Water();
+            WaterHarbour W3 = new WaterHarbour();
+            H1.WaterHarbour = W2;
             Water W4 = new Water();
             Water W5 = new Water();
             Water W6 = new Water();
@@ -324,10 +325,11 @@ namespace GoudKoorts
         public void SpawnShip()
         {
             Random rand = new Random();
-            int randomNumber = rand.Next(0, 11);
+            int randomNumber = rand.Next(3, 5);
             if (randomNumber == 4)
             {
                 ShipRoute[0].Movable = new Boat();
+                ShipRoute[0].Movable.onTrack = ShipRoute[0];
                 Movables.Add(ShipRoute[0].Movable);
             }
         }

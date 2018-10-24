@@ -6,11 +6,11 @@ using System.Threading.Tasks;
 
 namespace GoudKoorts.Models
 {
-    class WaterHarbour : Track
+    public class WaterHarbour : Track
     {
         public override bool MoveToThis(Movable movable)
         {
-            if (movable.load)
+            if (movable.load > 7)
             {
                 Movable = movable;
                 movable.onTrack.Movable = null;
@@ -23,6 +23,10 @@ namespace GoudKoorts.Models
 
         public override char Print()
         {
+            if (Movable != null)
+            {
+                return Movable.Print();
+            }
             return '~';
         }
     }

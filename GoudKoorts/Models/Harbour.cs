@@ -1,4 +1,5 @@
-﻿using System;
+﻿using GoudKoorts.Models;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -7,10 +8,14 @@ namespace GoudKoorts
 {
     public class Harbour : Track
     {
+        public Water WaterHarbour { get; set; }
+
         public override bool MoveToThis(Movable movable)
         {
             if (Movable == null)
             {
+                WaterHarbour.Movable.load++;
+                movable.load--;
                 Movable = movable;
                 movable.onTrack.Movable = null;
                 movable.onTrack = this;
