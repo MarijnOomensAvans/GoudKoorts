@@ -12,7 +12,7 @@ namespace GoudKoorts
         private InputView InputView;
         private OutputView OutputView;
         private Map map;
-        private int _waitTime = 4000;
+        private int _waitTime = 1;
         private System.Timers.Timer MyTimer;
         private bool Playing;
         
