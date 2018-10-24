@@ -40,11 +40,13 @@ namespace GoudKoorts.Models
                 if (Previous == _prevUp)
                 {
                     _prevUp.Next = null;
+                    _prevDown.Next = this;
                     Previous = _prevDown;
                 }
                 else
                 {
                     _prevDown.Next = null;
+                    _prevUp.Next = this;
                     Previous = _prevUp;
                 }
             }

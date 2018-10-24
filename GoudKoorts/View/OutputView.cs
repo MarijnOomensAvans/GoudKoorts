@@ -48,10 +48,10 @@ namespace GoudKoorts
             Console.WriteLine("Or press S to stop");
         }
 
-        internal void ShowEndScreen()
+        public void ShowEndScreen()
         {
             Console.WriteLine("A cart has crashed into another one! You died.");
-            Console.WriteLine("Press any key to exit");
+            Console.WriteLine("Press S to exit");
         }
     }
 }
