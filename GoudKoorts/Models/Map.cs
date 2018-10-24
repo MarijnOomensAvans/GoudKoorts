@@ -90,7 +90,7 @@ namespace GoudKoorts
             DT33.Next = DT34;
 
             Switch2 S3 = new Switch2(DT14, DT34);
-            DT34.Next = S3;
+            DT14.Next = S3;
             S3.Previous = DT14;
             DefaultTrack DT20 = new DefaultTrack();
             S3.Next = DT20;

@@ -33,10 +33,10 @@ namespace GoudKoorts
         {
             if (!_load)
             {
-                return '@';
+                return 'U';
             }
 
-            return 'L';
+            return '@';
         }
     }
 }
