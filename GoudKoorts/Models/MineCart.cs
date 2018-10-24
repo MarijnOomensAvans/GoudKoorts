@@ -7,9 +7,12 @@ namespace GoudKoorts
 {
     public class MineCart : Movable
     {
+        private bool _load;
+
         public MineCart(Track t)
         {
             onTrack = t;
+            _load = true;
         }
 
         public override bool Move()
@@ -28,7 +31,12 @@ namespace GoudKoorts
 
         public override char Print()
         {
-            return '@';
+            if (!_load)
+            {
+                return '@';
+            }
+
+            return 'L';
         }
     }
 }
