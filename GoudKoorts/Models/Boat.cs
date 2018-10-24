@@ -31,7 +31,7 @@ namespace GoudKoorts
 
         public override char Print()
         {
-            return (char) LoadInShip;
+            return Convert.ToChar(LoadInShip);
         }
     }
 }

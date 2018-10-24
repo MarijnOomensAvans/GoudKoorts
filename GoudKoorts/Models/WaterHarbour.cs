@@ -10,7 +10,15 @@ namespace GoudKoorts.Models
     {
         public override bool MoveToThis(Movable movable)
         {
-            throw new NotImplementedException();
+            if (movable.load)
+            {
+                Movable = movable;
+                movable.onTrack.Movable = null;
+                movable.onTrack = this;
+                return true;
+            }
+
+            return true;
         }
 
         public override char Print()
