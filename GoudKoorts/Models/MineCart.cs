@@ -11,7 +11,7 @@ namespace GoudKoorts
         public MineCart(Track t)
         {
             onTrack = t;
-            _load = true;
+            load = true;
         }
 
         public override bool Move()
@@ -30,7 +30,7 @@ namespace GoudKoorts
 
         public override char Print()
         {
-            if (!_load)
+            if (!load)
             {
                 return 'U';
             }

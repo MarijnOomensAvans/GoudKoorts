@@ -7,14 +7,31 @@ namespace GoudKoorts
 {
     public class Boat : Movable
     {
+        public int LoadInShip { get; set; }
+
+        public Boat()
+        {
+            LoadInShip = 0;
+            load = false;
+        }
+
         public override bool Move()
         {
-            throw new NotImplementedException();
+            if (onTrack.Next == null)
+            {
+                return true;
+            }
+            if (onTrack.Next.MoveToThis(this))
+            {
+                return true;
+            }
+
+            return true;
         }
 
         public override char Print()
         {
-            return 'B';
+            return (char) LoadInShip;
         }
     }
 }
