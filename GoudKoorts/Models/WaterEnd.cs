@@ -12,6 +12,7 @@ namespace GoudKoorts.Models
 
         public override bool MoveToThis(Movable movable)
         {
+            Controller.Score += movable.load;
             movable.onTrack.Movable = null;
             return true;
         }
