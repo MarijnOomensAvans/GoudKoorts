@@ -14,6 +14,7 @@ namespace GoudKoorts.Models
         {
             Controller.Score += movable.load;
             movable.onTrack.Movable = null;
+            movable.onTrack = null;
             return true;
         }
 
