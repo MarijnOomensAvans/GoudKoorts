@@ -90,12 +90,24 @@ namespace GoudKoorts
             }
             OutputView.DrawMap(map, Score);
 
-            map.SpawnCart();
-            map.SpawnShip();
+            if (Controller.Score > 18) //after one ship sails, remove spawn delay
+            {
+                map.SpawnCart();
+                map.SpawnShip();
+            } else
+            {
+                Random r = new Random();
+                int i = r.Next(3);
+                if (i == 0) // spawn delay
+                {
+                    map.SpawnCart();
+                    map.SpawnShip();
+                }
+            }
 
             OutputView.DrawMap(map, Score);
             OutputView.PrintControls();
-            if (_waitTime > 1000) //cant have it go down indefinately
+            if (_waitTime > 1500) //cant have it go down forever
             {
                 _waitTime -= 100;
             }

@@ -32,10 +32,10 @@ namespace GoudKoorts
         {
             if (load == 0)
             {
-                return 'U';
+                return 'o';
             }
 
-            return '@';
+            return 'ö';
         }
     }
 }
