@@ -11,7 +11,15 @@ namespace GoudKoorts
         {
             Console.Clear();
             Console.WriteLine("┌───────────────────────┐");
-            Console.WriteLine("| Goudkoorts - Score: " + score + " |");
+            if (score < 10)
+            {
+                Console.WriteLine("| Goudkoorts - Score: " + score + " |");
+            }
+            else
+            {
+                Console.WriteLine("| Goudkoorts - Score: " + score + "|");
+            }
+            
             Console.WriteLine("└───────────────────────┘");
             Console.WriteLine("───────────────────────");
             foreach (Track t in map.Row1)

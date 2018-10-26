@@ -325,7 +325,7 @@ namespace GoudKoorts
         public void SpawnShip()
         {
             Random rand = new Random();
-            int randomNumber = rand.Next(3, 5);
+            int randomNumber = rand.Next(0, 9);
             if (randomNumber == 4)
             {
                 ShipRoute[0].Movable = new Boat();

@@ -16,6 +16,7 @@ namespace GoudKoorts
             {
                 WaterHarbour.Movable.load++;
                 movable.load--;
+                Controller.Score++;
                 Movable = movable;
                 movable.onTrack.Movable = null;
                 movable.onTrack = this;

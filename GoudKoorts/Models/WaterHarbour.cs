@@ -12,6 +12,7 @@ namespace GoudKoorts.Models
         {
             if (movable.load > 7)
             {
+                Controller.Score += 10;
                 Movable = movable;
                 movable.onTrack.Movable = null;
                 movable.onTrack = this;
