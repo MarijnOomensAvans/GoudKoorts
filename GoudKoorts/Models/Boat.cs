@@ -15,6 +15,10 @@ namespace GoudKoorts
 
         public override bool Move()
         {
+            if(onTrack == null)
+            {
+                return true;
+            }
             if (onTrack.Next == null)
             {
                 return true;

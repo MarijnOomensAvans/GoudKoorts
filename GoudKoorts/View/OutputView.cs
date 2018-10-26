@@ -7,12 +7,12 @@ namespace GoudKoorts
 {
     public class OutputView
     {
-        public void DrawMap(Map map)
+        public void DrawMap(Map map, int score)
         {
             Console.Clear();
-            Console.WriteLine("┌─────────────┐");
-            Console.WriteLine("| Goudkoorts  |");
-            Console.WriteLine("└─────────────┘");
+            Console.WriteLine("┌───────────────────────┐");
+            Console.WriteLine("| Goudkoorts - Score: " + score + " |");
+            Console.WriteLine("└───────────────────────┘");
             Console.WriteLine("───────────────────────");
             foreach (Track t in map.Row1)
             {

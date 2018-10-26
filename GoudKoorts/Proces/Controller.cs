@@ -15,13 +15,15 @@ namespace GoudKoorts
         private int _waitTime = 1000;
         private System.Timers.Timer MyTimer;
         private bool Playing;
+
+        public static int Score;
         
         public Controller()
         {
             InputView = new InputView();
             OutputView = new OutputView();
             map = new Map();
-            OutputView.DrawMap(map);
+            OutputView.DrawMap(map,Score);
             OutputView.PrintControls();
 
             MyTimer = new System.Timers.Timer();
@@ -43,31 +45,31 @@ namespace GoudKoorts
                     case 1:
                         map.SwitchSwitch(1);
                         Console.Clear();
-                        OutputView.DrawMap(map);
+                        OutputView.DrawMap(map,Score);
                         OutputView.PrintControls();
                         break;
                     case 2:
                         map.SwitchSwitch(2);
                         Console.Clear();
-                        OutputView.DrawMap(map);
+                        OutputView.DrawMap(map,Score);
                         OutputView.PrintControls();
                         break;
                     case 3:
                         map.SwitchSwitch(3);
                         Console.Clear();
-                        OutputView.DrawMap(map);
+                        OutputView.DrawMap(map,Score);
                         OutputView.PrintControls();
                         break;
                     case 4:
                         map.SwitchSwitch(4);
                         Console.Clear();
-                        OutputView.DrawMap(map);
+                        OutputView.DrawMap(map,Score);
                         OutputView.PrintControls();
                         break;
                     case 5:
                         map.SwitchSwitch(5);
                         Console.Clear();
-                        OutputView.DrawMap(map);
+                        OutputView.DrawMap(map,Score);
                         OutputView.PrintControls();
                         break;
                 }
@@ -85,7 +87,7 @@ namespace GoudKoorts
             {
                 CollisionTriggered();
             }
-            OutputView.DrawMap(map);
+            OutputView.DrawMap(map,Score);
 
             Random r = new Random();
             int b = r.Next(2); // TODO makes testing easier. Remove afterwards!
@@ -95,7 +97,7 @@ namespace GoudKoorts
                 map.SpawnShip();
             }
             
-            OutputView.DrawMap(map);
+            OutputView.DrawMap(map,Score);
             OutputView.PrintControls();
             if (_waitTime > 1600) //cant have it go down indefinately
             {
