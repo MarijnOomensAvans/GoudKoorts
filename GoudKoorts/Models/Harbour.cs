@@ -14,9 +14,13 @@ namespace GoudKoorts
         {
             if (Movable == null)
             {
-                WaterHarbour.Movable.load++;
-                movable.load--;
-                Controller.Score++;
+                if (WaterHarbour.Movable != null)
+                {
+                    WaterHarbour.Movable.load++;
+                    movable.load--;
+                    Controller.Score++;
+                }
+                
                 Movable = movable;
                 movable.onTrack.Movable = null;
                 movable.onTrack = this;

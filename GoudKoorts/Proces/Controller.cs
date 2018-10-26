@@ -12,7 +12,7 @@ namespace GoudKoorts
         private InputView InputView;
         private OutputView OutputView;
         private Map map;
-        private int _waitTime = 3500;
+        private int _waitTime = 2000;
         private System.Timers.Timer MyTimer;
         private bool Playing;
 
@@ -28,13 +28,14 @@ namespace GoudKoorts
 
             MyTimer = new System.Timers.Timer();
             MyTimer.Elapsed += new ElapsedEventHandler(OnTimedEvent);
+            Playing = true;
+            Start();
         }
 
         public void Start()
         {
             MyTimer.Interval = _waitTime;
             MyTimer.Enabled = true;
-            Playing = true;
             while (Playing)
             {
                 int result = InputView.GetSwitchNumber();
@@ -90,18 +91,18 @@ namespace GoudKoorts
             }
             OutputView.DrawMap(map, Score);
 
-            if (Controller.Score > 18) //after one ship sails, remove spawn delay
+            map.SpawnShip();
+            if (Score > 17) //after one ship sails, remove spawn delay
             {
                 map.SpawnCart();
-                map.SpawnShip();
+                
             } else
             {
                 Random r = new Random();
                 int i = r.Next(3);
                 if (i == 0) // spawn delay
                 {
-                    map.SpawnCart();
-                    map.SpawnShip();
+                    map.SpawnCart();                    
                 }
             }
 
@@ -124,6 +125,7 @@ namespace GoudKoorts
         private void OnTimedEvent(object source, ElapsedEventArgs e)
         {
             TimerEnd();
+            Playing = true;
             Start();
         }
 

@@ -12,6 +12,7 @@ namespace GoudKoorts
         private AbstractSwitch[] Switches;
         private List<Movable> Movables;
         private Track[] ShipRoute;
+        private Random r;
 
         public Track[] Row1 { get; }
         public Track[] Row2 { get; }
@@ -25,6 +26,7 @@ namespace GoudKoorts
             spawnPoints = new SpawnPoint[3];
             Movables = new List<Movable>();
             ShipRoute = new Track[8];
+            r = new Random();
 
             Row1 = new Track[23];
             Row2 = new Track[23];
@@ -316,16 +318,14 @@ namespace GoudKoorts
 
         public void SpawnCart()
         {
-            Random rand = new Random();
-            int randomNumber = rand.Next(0,3);
+            int randomNumber = r.Next(3);
             Movables.Add(spawnPoints[randomNumber].SpawnMineCart());
         }
 
         public void SpawnShip()
         {
-            Random rand = new Random();
-            int randomNumber = rand.Next(0, 9);
-            if (randomNumber == 4)
+            int randomNumber = r.Next(9);
+            if (randomNumber == 1)
             {
                 ShipRoute[0].Movable = new Boat();
                 ShipRoute[0].Movable.onTrack = ShipRoute[0];
