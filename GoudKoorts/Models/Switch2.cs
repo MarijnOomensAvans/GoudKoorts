@@ -49,8 +49,7 @@ namespace GoudKoorts.Models
                     _prevUp.Next = this;
                     Previous = _prevUp;
                 }
-            }
-            
+            }            
         }
 
         public override char Print()

@@ -1,42 +1,40 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <ClassDiagram MajorVersion="1" MinorVersion="1">
-  <Class Name="GoudKoorts.Program" Collapsed="true">
-    <Position X="1.75" Y="3" Width="1.5" />
-    <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAA=</HashCode>
-      <FileName>Proces\Program.cs</FileName>
-    </TypeIdentifier>
-  </Class>
-  <Class Name="GoudKoorts.Map">
-    <Position X="5.75" Y="5.25" Width="1.5" />
-    <TypeIdentifier>
-      <HashCode>AAAAAAAEAAAEAAAAQIAAAAAA8AECAAAAAAAAAEAACAA=</HashCode>
-      <FileName>Models\Map.cs</FileName>
-    </TypeIdentifier>
-    <ShowAsAssociation>
-      <Field Name="spawnPoints" />
-      <Field Name="mineCarts" />
-      <Field Name="Switches" />
-    </ShowAsAssociation>
-  </Class>
   <Class Name="GoudKoorts.InputView">
-    <Position X="3.5" Y="0.5" Width="1.5" />
+    <Position X="2" Y="5.75" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgAAAA=</HashCode>
       <FileName>View\InputView.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="GoudKoorts.OutputView">
-    <Position X="6.25" Y="0.5" Width="1.5" />
+    <Position X="3.75" Y="5.75" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAIAAgAAAAAAAAAAAAAAAAAAAAAAAAAABAAA=</HashCode>
       <FileName>View\OutputView.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="GoudKoorts.Controller">
-    <Position X="3.75" Y="3" Width="1.5" />
+  <Class Name="GoudKoorts.Program" Collapsed="true">
+    <Position X="1" Y="8" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAEAABACAAAAAAAAICAAAIAAAYAAAAAEAEAAAAAAA=</HashCode>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAA=</HashCode>
+      <FileName>Proces\Program.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="GoudKoorts.Controller" Collapsed="true">
+    <Position X="2.75" Y="8" Width="1.5" />
+    <AssociationLine Name="InputView" Type="GoudKoorts.InputView">
+      <MemberNameLabel ManuallyPlaced="true">
+        <Position X="0.022" Y="0.817" />
+      </MemberNameLabel>
+    </AssociationLine>
+    <AssociationLine Name="OutputView" Type="GoudKoorts.OutputView">
+      <MemberNameLabel ManuallyPlaced="true">
+        <Position X="-0.981" Y="0.324" />
+      </MemberNameLabel>
+    </AssociationLine>
+    <TypeIdentifier>
+      <HashCode>AAAAEAABACAAAAgAAAICAAAIAAAYAAAAAEAEAAAAAAA=</HashCode>
       <FileName>Proces\Controller.cs</FileName>
     </TypeIdentifier>
     <ShowAsAssociation>
@@ -45,119 +43,234 @@
       <Field Name="map" />
     </ShowAsAssociation>
   </Class>
-  <Class Name="GoudKoorts.Track">
-    <Position X="10.5" Y="4.75" Width="1.5" />
+  <Class Name="GoudKoorts.Map" Collapsed="true">
+    <Position X="2.75" Y="9.25" Width="1.5" />
+    <AssociationLine Name="Movables" Type="GoudKoorts.Movable">
+      <MemberNameLabel ManuallyPlaced="true">
+        <Position X="1.139" Y="2.673" />
+      </MemberNameLabel>
+    </AssociationLine>
+    <AssociationLine Name="spawnPoints" Type="GoudKoorts.SpawnPoint">
+      <MemberNameLabel ManuallyPlaced="true">
+        <Position X="2.752" Y="0.629" />
+      </MemberNameLabel>
+    </AssociationLine>
+    <AssociationLine Name="Switches" Type="GoudKoorts.AbstractSwitch">
+      <MemberNameLabel ManuallyPlaced="true">
+        <Position X="-0.274" Y="0.919" />
+      </MemberNameLabel>
+    </AssociationLine>
     <TypeIdentifier>
-      <HashCode>AgAAAAAQAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAEAAA=</HashCode>
-      <FileName>Models\Track.cs</FileName>
+      <HashCode>AAAAAAAEAAAEAAAAAIAAAAAg8AEKAAAAAAABAEAACAA=</HashCode>
+      <FileName>Models\Map.cs</FileName>
     </TypeIdentifier>
+    <ShowAsCollectionAssociation>
+      <Field Name="Movables" />
+      <Field Name="spawnPoints" />
+      <Field Name="Switches" />
+    </ShowAsCollectionAssociation>
   </Class>
-  <Class Name="GoudKoorts.SpawnPoint">
-    <Position X="8" Y="9.5" Width="1.5" />
+  <Class Name="GoudKoorts.Movable" Collapsed="true">
+    <Position X="4.75" Y="13.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAEACA=</HashCode>
-      <FileName>Models\SpawnPoint.cs</FileName>
-    </TypeIdentifier>
-  </Class>
-  <Class Name="GoudKoorts.Switch">
-    <Position X="14.5" Y="2.25" Width="1.5" />
-    <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAEAAAAAAAAAAABCAAACAAAAAAAAAAEAAA=</HashCode>
-      <FileName>Models\Switch.cs</FileName>
-    </TypeIdentifier>
-    <ShowAsAssociation>
-      <Field Name="_nextDown" />
-      <Field Name="_nextUp" />
-    </ShowAsAssociation>
-  </Class>
-  <Class Name="GoudKoorts.Movable">
-    <Position X="2.5" Y="6.75" Width="1.5" />
-    <TypeIdentifier>
-      <HashCode>EAAAAAAAAIAAAAAAAAAAAAAAAAAAAAAIAAAAAAAEAAA=</HashCode>
+      <HashCode>AAAAAAAAAIAAAAAAAAAAAAAAAAAAAAAIAAAAAAAEAAA=</HashCode>
       <FileName>Models\Movable.cs</FileName>
     </TypeIdentifier>
     <ShowAsAssociation>
       <Field Name="onTrack" />
     </ShowAsAssociation>
   </Class>
-  <Class Name="GoudKoorts.MineCart">
-    <Position X="0.5" Y="9.25" Width="1.5" />
+  <Class Name="GoudKoorts.SpawnPoint" Collapsed="true">
+    <Position X="8" Y="10.25" Width="1.5" />
+    <InheritanceLine Type="GoudKoorts.Track" FixedFromPoint="true">
+      <Path>
+        <Point X="5.5" Y="12.25" />
+        <Point X="5.5" Y="11.233" />
+        <Point X="8.75" Y="11.233" />
+        <Point X="8.75" Y="10.941" />
+      </Path>
+    </InheritanceLine>
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEAAA=</HashCode>
-      <FileName>Models\MineCart.cs</FileName>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAEACA=</HashCode>
+      <FileName>Models\SpawnPoint.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="GoudKoorts.Boat">
-    <Position X="3.5" Y="9.5" Width="1.5" />
-    <TypeIdentifier>
-      <HashCode>AAAAAAAAAIAAAAAAAAAAACAAAAAAAAAAAAAAAAAEAAA=</HashCode>
-      <FileName>Models\Boat.cs</FileName>
-    </TypeIdentifier>
-  </Class>
-  <Class Name="GoudKoorts.Harbour">
-    <Position X="11.25" Y="8.5" Width="1.5" />
-    <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAEAAA=</HashCode>
-      <FileName>Models\Harbour.cs</FileName>
-    </TypeIdentifier>
-  </Class>
-  <Class Name="GoudKoorts.Water">
-    <Position X="13" Y="8.5" Width="1.5" />
-    <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAEAAA=</HashCode>
-      <FileName>Models\Water.cs</FileName>
-    </TypeIdentifier>
-  </Class>
-  <Class Name="GoudKoorts.Shunt">
-    <Position X="14.75" Y="8.5" Width="1.5" />
-    <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAEAAA=</HashCode>
-      <FileName>Models\Shunt.cs</FileName>
-    </TypeIdentifier>
-  </Class>
-  <Class Name="GoudKoorts.EmptySpace">
-    <Position X="16.5" Y="8.5" Width="1.5" />
-    <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAEAAA=</HashCode>
-      <FileName>Models\EmptySpace.cs</FileName>
-    </TypeIdentifier>
-  </Class>
-  <Class Name="GoudKoorts.EndField">
-    <Position X="20.75" Y="8.5" Width="1.5" />
-    <TypeIdentifier>
-      <HashCode>AgAAAAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAAAAA=</HashCode>
-      <FileName>Models\EndField.cs</FileName>
-    </TypeIdentifier>
-  </Class>
-  <Class Name="GoudKoorts.DefaultTrack">
-    <Position X="18.5" Y="8.5" Width="1.5" />
-    <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAEAAA=</HashCode>
-      <FileName>Models\DefaultTrack.cs</FileName>
-    </TypeIdentifier>
-  </Class>
-  <Class Name="GoudKoorts.Models.Switch2">
-    <Position X="12.5" Y="1" Width="1.5" />
-    <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAEAgAAAAAAQAABAAAAAAAAABAAAAAEAAA=</HashCode>
-      <FileName>Models\Switch2.cs</FileName>
-    </TypeIdentifier>
-    <ShowAsAssociation>
-      <Field Name="_prevDown" />
-      <Field Name="_prevUp" />
-    </ShowAsAssociation>
-  </Class>
-  <Class Name="GoudKoorts.AbstractSwitch">
-    <Position X="20" Y="5.75" Width="1.5" />
+  <Class Name="GoudKoorts.AbstractSwitch" Collapsed="true">
+    <Position X="3.75" Y="11.25" Width="1.5" />
+    <InheritanceLine Type="GoudKoorts.Track" FixedFromPoint="true" FixedToPoint="true">
+      <Path>
+        <Point X="4.75" Y="12.562" />
+        <Point X="4.188" Y="12.562" />
+        <Point X="4.188" Y="11.941" />
+      </Path>
+    </InheritanceLine>
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAEAAAAAAAAAAABAAAAAAAAAAAAAAAEAAA=</HashCode>
       <FileName>Models\AbstractSwitch.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="System.Collections.Generic.List&lt;T&gt;" Collapsed="true">
-    <Position X="9" Y="3.75" Width="1.5" />
-    <TypeIdentifier />
-    <Lollipop Position="0.2" />
+  <Class Name="GoudKoorts.Boat" Collapsed="true">
+    <Position X="7.5" Y="14" Width="1.5" />
+    <InheritanceLine Type="GoudKoorts.Movable" FixedFromPoint="true" FixedToPoint="true">
+      <Path>
+        <Point X="6.25" Y="13.938" />
+        <Point X="6.625" Y="13.938" />
+        <Point X="6.625" Y="14.25" />
+        <Point X="7.5" Y="14.25" />
+      </Path>
+    </InheritanceLine>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEAAA=</HashCode>
+      <FileName>Models\Boat.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="GoudKoorts.Track" Collapsed="true">
+    <Position X="4.75" Y="12.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AgAAAAAQAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAEAAA=</HashCode>
+      <FileName>Models\Track.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="GoudKoorts.MineCart" Collapsed="true">
+    <Position X="7.5" Y="13" Width="1.5" />
+    <InheritanceLine Type="GoudKoorts.Movable" FixedFromPoint="true" FixedToPoint="true">
+      <Path>
+        <Point X="6.25" Y="13.688" />
+        <Point X="6.625" Y="13.688" />
+        <Point X="6.625" Y="13.375" />
+        <Point X="7.5" Y="13.375" />
+      </Path>
+    </InheritanceLine>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEAAA=</HashCode>
+      <FileName>Models\MineCart.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="GoudKoorts.DefaultTrack" Collapsed="true">
+    <Position X="9.75" Y="10.25" Width="1.5" />
+    <InheritanceLine Type="GoudKoorts.Track" FixedFromPoint="true">
+      <Path>
+        <Point X="5.5" Y="12.25" />
+        <Point X="5.5" Y="11.233" />
+        <Point X="10.5" Y="11.233" />
+        <Point X="10.5" Y="10.941" />
+      </Path>
+    </InheritanceLine>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAEAAA=</HashCode>
+      <FileName>Models\DefaultTrack.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="GoudKoorts.EmptySpace" Collapsed="true">
+    <Position X="8" Y="11.75" Width="1.5" />
+    <InheritanceLine Type="GoudKoorts.Track" ManuallyRouted="true" FixedFromPoint="true" FixedToPoint="true">
+      <Path>
+        <Point X="5.5" Y="12.25" />
+        <Point X="5.5" Y="11.233" />
+        <Point X="8.75" Y="11.233" />
+        <Point X="8.75" Y="11.75" />
+      </Path>
+    </InheritanceLine>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAEAAA=</HashCode>
+      <FileName>Models\EmptySpace.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="GoudKoorts.EndField" Collapsed="true">
+    <Position X="9.75" Y="9" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AgAAAAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Models\EndField.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="GoudKoorts.Harbour" Collapsed="true">
+    <Position X="9.75" Y="11.75" Width="1.5" />
+    <InheritanceLine Type="GoudKoorts.Track" ManuallyRouted="true" FixedFromPoint="true" FixedToPoint="true">
+      <Path>
+        <Point X="5.5" Y="12.25" />
+        <Point X="5.5" Y="11.269" />
+        <Point X="10.5" Y="11.269" />
+        <Point X="10.5" Y="11.75" />
+      </Path>
+    </InheritanceLine>
+    <TypeIdentifier>
+      <HashCode>AEAAAAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAEAAA=</HashCode>
+      <FileName>Models\Harbour.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="GoudKoorts.Shunt" Collapsed="true">
+    <Position X="11.5" Y="10.25" Width="1.5" />
+    <InheritanceLine Type="GoudKoorts.Track" FixedFromPoint="true">
+      <Path>
+        <Point X="5.5" Y="12.25" />
+        <Point X="5.5" Y="11.233" />
+        <Point X="12.25" Y="11.233" />
+        <Point X="12.25" Y="10.941" />
+      </Path>
+    </InheritanceLine>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAEAAA=</HashCode>
+      <FileName>Models\Shunt.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="GoudKoorts.Switch" Collapsed="true">
+    <Position X="4.25" Y="10" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAEAAAAAAAAAAABCAAACAAAAAAAAAAEAAA=</HashCode>
+      <FileName>Models\Switch.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="GoudKoorts.Models.Switch2" Collapsed="true">
+    <Position X="6" Y="10" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAEAgAAAAAAQAABAAAAAAAAABAAAAAEAAA=</HashCode>
+      <FileName>Models\Switch2.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="GoudKoorts.Water" Collapsed="true">
+    <Position X="11.5" Y="11.75" Width="1.5" />
+    <InheritanceLine Type="GoudKoorts.Track" FixedFromPoint="true" FixedToPoint="true">
+      <Path>
+        <Point X="5.5" Y="12.25" />
+        <Point X="5.5" Y="11.269" />
+        <Point X="12.25" Y="11.269" />
+        <Point X="12.25" Y="11.75" />
+      </Path>
+    </InheritanceLine>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAEAAA=</HashCode>
+      <FileName>Models\Water.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="GoudKoorts.Models.WaterEnd" Collapsed="true">
+    <Position X="13.25" Y="11.75" Width="1.5" />
+    <InheritanceLine Type="GoudKoorts.Track" FixedFromPoint="true" FixedToPoint="true">
+      <Path>
+        <Point X="5.5" Y="12.25" />
+        <Point X="5.5" Y="11.269" />
+        <Point X="13.938" Y="11.269" />
+        <Point X="13.938" Y="11.75" />
+      </Path>
+    </InheritanceLine>
+    <TypeIdentifier>
+      <HashCode>AgAAAAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAEAAA=</HashCode>
+      <FileName>Models\WaterEnd.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="GoudKoorts.Models.WaterHarbour" Collapsed="true">
+    <Position X="13.25" Y="10.25" Width="1.5" />
+    <InheritanceLine Type="GoudKoorts.Track" FixedToPoint="true">
+      <Path>
+        <Point X="5.5" Y="12.25" />
+        <Point X="5.5" Y="11.233" />
+        <Point X="13.938" Y="11.233" />
+        <Point X="13.938" Y="10.941" />
+      </Path>
+    </InheritanceLine>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAEAAA=</HashCode>
+      <FileName>Models\WaterHarbour.cs</FileName>
+    </TypeIdentifier>
   </Class>
   <Font Name="Segoe UI" Size="9" />
 </ClassDiagram>
