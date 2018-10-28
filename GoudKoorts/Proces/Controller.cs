@@ -3,14 +3,13 @@ using System.Timers;
 
 namespace GoudKoorts
 {
-
     public class Controller
     {
         private InputView InputView;
         private OutputView OutputView;
         private Map map;
         private int _waitTime = 2000;
-        private System.Timers.Timer MyTimer;
+        private Timer MyTimer;
         private bool Playing;
 
         public static int Score;
@@ -125,6 +124,5 @@ namespace GoudKoorts
             Playing = true;
             Start();
         }
-
     }
 }

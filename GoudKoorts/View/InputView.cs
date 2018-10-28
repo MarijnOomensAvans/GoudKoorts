@@ -6,8 +6,7 @@ using System.Text;
 namespace GoudKoorts
 {
     public class InputView
-    {
-        
+    {        
         public int GetSwitchNumber()
         {                           
             bool pressed = false;
@@ -42,9 +41,7 @@ namespace GoudKoorts
                         result = 5;
                         pressed = true;
                         break;
-                    default:
-                        Console.WriteLine("");
-                        Console.WriteLine("Press 1-5 to switch to switch switches (direction left-right, first from the left is 1 etc.)");
+                    default:                        
                         break;
                 }
             }
